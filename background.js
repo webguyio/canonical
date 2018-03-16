@@ -1,6 +1,6 @@
 'use strict';
 
-chrome.runtime.onMessage.addListener(({method}, {tab}) => {
+chrome.runtime.onMessage.addListener(({method, url}, {tab}) => {
   if (method === 'is-canonical') {
     chrome.pageAction.setIcon({
       tabId: tab.id,
@@ -19,6 +19,10 @@ chrome.runtime.onMessage.addListener(({method}, {tab}) => {
       }
     });
   }
+  chrome.pageAction.setTitle({
+    tabId: tab.id,
+    title: url
+  });
   chrome.pageAction.show(tab.id);
 });
 
