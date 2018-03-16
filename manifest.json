@@ -4,7 +4,7 @@
   "name": "Canonical",
   "author": "Bryan Hadaway",
   "homepage_url": "https://github.com/bhadaway/canonical",
-  "version": "1.0",
+  "version": "1.1",
 
   "description": "Allows you to quickly redirect to the canonical version of the URL you're on, if available.",
 
